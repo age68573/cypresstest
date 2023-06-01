@@ -15,6 +15,7 @@ pipeline {
       }
       steps {
         sh '''npm -v
+echo $(npm bin)
 cypress run 
 '''
       }
