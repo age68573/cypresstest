@@ -16,6 +16,7 @@ pipeline {
       steps {
         sh '''npm -v
 npm ci
+sudo apt-get update
 apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 npm run cy:run  --spec "cypress/e2e/my-spec.cy.js"'''
       }
