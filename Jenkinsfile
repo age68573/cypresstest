@@ -9,7 +9,8 @@ pipeline {
 
       }
       steps {
-        sh 'npm run cy:run  --spec "cypress/e2e/spec.cy.js"'
+        sh '''npm ci
+npm run cy:run  --spec "cypress/e2e/spec.cy.js"'''
       }
     }
 
