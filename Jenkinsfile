@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        sh 'echo npm -v'
+        sh 'npm run cy:run -- --record --spec "cypress/e2e/my-spec.cy.js"'
       }
     }
 
