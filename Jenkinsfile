@@ -15,6 +15,7 @@ pipeline {
       }
       steps {
         sh '''npm -v
+npm cypress install
 ls
 echo $(npm bin)
 cypress run --config-file ./cypress.config.js
