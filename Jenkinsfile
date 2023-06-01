@@ -7,24 +7,8 @@ pipeline {
   }
   stages {
     stage('cypress') {
-      agent {
-        docker {
-          image 'cypress/included'
-          args '-v $PWD:/e2e -w /e2e '
-        }
-
-      }
       steps {
-        sh '''npm -v
-echo $NODE_PATH
-ls -a
-echo $(npm bin)
-cypress --help
-cypress -v
-cypress verify
-cypress info
-cypress run --config-file ./cypress.config.js
-'''
+        sh ' docker run -it -v $PWD:/e2e -w /e2e  cypress/included --spec ./cypress/e2e/spec.cy.js'
       }
     }
 
