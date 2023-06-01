@@ -7,8 +7,15 @@ pipeline {
   }
   stages {
     stage('cypress') {
+      agent {
+        docker {
+          image 'cypress/base:18.14.1'
+        }
+
+      }
       steps {
-        sh 'docker run  -v $PWD:/e2e -w /e2e  cypress/included --spec ./cypress/e2e/spec.cy.js'
+        sh '''npm ci
+npm run test:ci:record'''
       }
     }
 
