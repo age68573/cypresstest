@@ -15,7 +15,8 @@ pipeline {
       }
       steps {
         sh '''npm ci
-npm run test:ci:record'''
+
+npm run cy:run  --spec "cypress/e2e/my-spec.cy.js"'''
       }
     }
 
