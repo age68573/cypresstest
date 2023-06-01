@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        sh 'npm run cy:run --  --config-file "./cypress.config.js" --spec "cypress/e2e/spec.cy.js"'
+        sh 'npm run cy:run  --spec "cypress/e2e/spec.cy.js"'
       }
     }
 
