@@ -10,7 +10,7 @@ pipeline {
       agent {
         docker {
           image 'cypress/included'
-          args '-it -v $PWD:/e2e -w /e2e  --spec ./cypress/e2e/spec.cy.js'
+          args '-v $PWD:/e2e -w /e2e '
         }
 
       }
