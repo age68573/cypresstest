@@ -18,7 +18,9 @@ pipeline {
 echo $NODE_PATH
 ls -a
 echo $(npm bin)
-${NODE_PATH}/.bin/cypress run --config-file ./cypress.config.js
+cypress --help
+cypress -v
+cypress run --config-file ./cypress.config.js
 '''
       }
     }
