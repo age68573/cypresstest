@@ -15,10 +15,10 @@ pipeline {
       }
       steps {
         sh '''npm -v
-
+echo $NODE_PATH
 ls -a
 echo $(npm bin)
-cypress run --config-file ./cypress.config.js
+${NODE_PATH}/.bin/cypress run --config-file ./cypress.config.js
 '''
       }
     }
