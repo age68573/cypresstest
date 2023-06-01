@@ -20,6 +20,8 @@ ls -a
 echo $(npm bin)
 cypress --help
 cypress -v
+cypress verify
+cypress info
 cypress run --config-file ./cypress.config.js
 '''
       }
